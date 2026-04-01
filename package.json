@@ -1,0 +1,46 @@
+{
+  "name": "studyforge",
+  "version": "1.0.0",
+  "description": "Premium Focus & Task Management Dashboard",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.studyforge.app",
+    "productName": "StudyForge",
+    "copyright": "Copyright © 2026 StudyForge Team",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true
+    },
+    "files": [
+      "**/*",
+      "!dist/*",
+      "!.agents/*"
+    ]
+  },
+  "keywords": [
+    "focus",
+    "timer",
+    "study",
+    "taskmanager"
+  ],
+  "author": "StudyForge Team",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^26.8.1"
+  }
+}

@@ -1,0 +1,60 @@
+/**
+ * StudyForge — themes.css
+ * Theme-specific overrides and ambient backgrounds
+ */
+
+/* 1. Dark Theme (Standard & Only) */
+/* Variables are already in base.css for dark by default */
+
+/* 2. Ambient / Zen Background Layer */
+/* Added to enhance the "Premium" feel from the frontend-design skill */
+.app-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 10% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 3. Global Texture (Subtle Grain) */
+.app-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 2;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* 4. Subject-Specific Accent Classes (Dynamic) */
+/* These are used for progress bars and badges that match subject colors */
+.color-subject-1 { --subject-color: #F2B544; }
+.color-subject-2 { --subject-color: #EF4444; }
+.color-subject-3 { --subject-color: #10B981; }
+.color-subject-4 { --subject-color: #3B82F6; }
+.color-subject-5 { --subject-color: #8B5CF6; }
+.color-subject-6 { --subject-color: #EC4899; }
+.color-subject-7 { --subject-color: #06B6D4; }
+.color-subject-8 { --subject-color: #F97316; }
+
+/* 5. Placeholder for Light Theme (Commented out for v1 spec) */
+/*
+[data-theme="light"] {
+  --color-deep-blue:    #F3F4F6;
+  --color-navy-surface: #E5E7EB;
+  --color-bg-warm:      #F9FAFB;
+  --color-bg-card:      #FFFFFF;
+  --color-text-light:   #111827;
+  --color-text-dark:    #374151;
+  --color-text-muted:   #6B7280;
+  --color-border:       #D1D5DB;
+}
+*/

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyForge — Focus Command Center</title>
+  
+  <!-- Premium Typography: Outfit for Headings, Inter for Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Styling -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/themes.css">
+  
+  <!-- Favicon (Fire SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F59E0B'%3E%3Cpath d='M12 2C10.5 5 13 8 13 11.5C13 13.5 11.5 15 10 15C8.5 15 7 13.5 7 11.5C7 9.5 8 8 9 7.5C8 8.5 6 10.5 6 13C6 16.5 8.5 19 12 19C15.5 19 18 16.5 18 13C18 10 15.5 6.5 12 2Z'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div id="app-container" class="app-container">
+    <!-- Left Sidebar: Fixed Navigation (Full Height) -->
+    <aside id="sidebar" class="sidebar">
+      <!-- Content (Logo + Nav + Toggle) populated by js/ui.js renderSidebar() -->
+      <div class="sidebar-skeleton">
+        <div class="skeleton-item"></div>
+        <div class="skeleton-item"></div>
+        <div class="skeleton-item"></div>
+      </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="app-content-wrapper">
+      <header class="main-header">
+        <div id="header-actions" class="header-actions">
+          <!-- Contextual actions like "New Task" or "Export" -->
+        </div>
+      </header>
+
+      <main id="main-content" class="main-content">
+        <div id="page-container" class="page-container">
+          <div class="page-loading">
+            <div class="spinner"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Global UI Elements -->
+  <div id="modal-root"></div>
+  <div id="toast-container" class="toast-container"></div>
+  
+  <!-- App Entry Point -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
